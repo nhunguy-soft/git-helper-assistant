@@ -1,0 +1,651 @@
+{
+  "en": [
+    {
+      "cmd": "git config --global user.name \"Your Name\"",
+      "desc": "Set Git username",
+      "usage": "Configure the name used in commits",
+      "example": "git config --global user.name \"John Doe\"",
+      "category": "setup"
+    },
+    {
+      "cmd": "git config --global user.email \"you@example.com\"",
+      "desc": "Set Git email",
+      "usage": "Email must match your GitHub/GitLab account",
+      "example": "git config --global user.email \"john@gmail.com\"",
+      "category": "setup"
+    },
+    {
+      "cmd": "git config --list",
+      "desc": "View Git configuration",
+      "usage": "Shows all current Git settings",
+      "example": "git config --list",
+      "category": "setup"
+    },
+    {
+      "cmd": "git status",
+      "desc": "Check current repository status",
+      "usage": "Shows the working tree status: staged, unstaged, and untracked files",
+      "example": "git status",
+      "category": "basic"
+    },
+    {
+      "cmd": "git init",
+      "desc": "Initialize a new Git repository",
+      "usage": "Creates a new .git folder to start tracking changes",
+      "example": "git init",
+      "category": "basic"
+    },
+    {
+      "cmd": "git clone <repo-url>",
+      "desc": "Clone a remote repository",
+      "usage": "Downloads a remote repository to your local machine",
+      "example": "git clone https://github.com/user/project.git",
+      "category": "remote"
+    },
+    {
+      "cmd": "git add .",
+      "desc": "Stage all changed files",
+      "usage": "Adds all modified and new files to the staging area",
+      "example": "git add .",
+      "category": "basic"
+    },
+    {
+      "cmd": "git add <file>",
+      "desc": "Stage a specific file",
+      "usage": "Adds only the specified file to the staging area",
+      "example": "git add index.html",
+      "category": "basic"
+    },
+    {
+      "cmd": "git commit -m \"message\"",
+      "desc": "Commit changes with message",
+      "usage": "Creates a commit with a short description of changes",
+      "example": "git commit -m \"Add login feature\"",
+      "category": "basic"
+    },
+    {
+      "cmd": "git commit --amend",
+      "desc": "Modify the last commit",
+      "usage": "Edits the most recent commit message or content",
+      "example": "git commit --amend",
+      "category": "basic"
+    },
+    {
+      "cmd": "git log",
+      "desc": "View commit history",
+      "usage": "Displays the full commit history",
+      "example": "git log",
+      "category": "basic"
+    },
+    {
+      "cmd": "git log --oneline",
+      "desc": "View commit history in one line",
+      "usage": "Shows compact commit history",
+      "example": "git log --oneline",
+      "category": "basic"
+    },
+    {
+      "cmd": "git branch",
+      "desc": "List all branches",
+      "usage": "Displays all local branches",
+      "example": "git branch",
+      "category": "branch"
+    },
+    {
+      "cmd": "git branch <name>",
+      "desc": "Create a new branch",
+      "usage": "Creates a new branch but does not switch to it",
+      "example": "git branch feature/auth",
+      "category": "branch"
+    },
+    {
+      "cmd": "git checkout <branch>",
+      "desc": "Switch to another branch",
+      "usage": "Moves HEAD to the specified branch",
+      "example": "git checkout develop",
+      "category": "branch"
+    },
+    {
+      "cmd": "git checkout -b <branch>",
+      "desc": "Create and switch to a new branch",
+      "usage": "Creates a new branch and switches to it immediately",
+      "example": "git checkout -b feature/login",
+      "category": "branch"
+    },
+    {
+      "cmd": "git merge <branch>",
+      "desc": "Merge another branch into current branch",
+      "usage": "Combines changes from another branch into the current one",
+      "example": "git merge develop",
+      "category": "branch"
+    },
+    {
+      "cmd": "git pull",
+      "desc": "Fetch and merge from remote repository",
+      "usage": "Updates local branch with remote changes",
+      "example": "git pull origin main",
+      "category": "remote"
+    },
+    {
+      "cmd": "git push",
+      "desc": "Push commits to remote repository",
+      "usage": "Uploads local commits to the remote repository",
+      "example": "git push origin main",
+      "category": "remote"
+    },
+    {
+      "cmd": "git fetch",
+      "desc": "Fetch updates from remote without merging",
+      "usage": "Downloads remote changes without applying them",
+      "example": "git fetch origin",
+      "category": "remote"
+    },
+    {
+      "cmd": "git remote -v",
+      "desc": "View remote repositories",
+      "usage": "Shows remote repository URLs",
+      "example": "git remote -v",
+      "category": "remote"
+    },
+    {
+      "cmd": "git stash",
+      "desc": "Temporarily save uncommitted changes",
+      "usage": "Saves uncommitted changes to a stack",
+      "example": "git stash",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git stash pop",
+      "desc": "Apply and remove stashed changes",
+      "usage": "Restores the latest stashed changes",
+      "example": "git stash pop",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git reset --hard HEAD",
+      "desc": "Discard all local changes",
+      "usage": "⚠️ Completely resets working directory (dangerous)",
+      "example": "git reset --hard HEAD",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git reset <file>",
+      "desc": "Unstage a file",
+      "usage": "Removes file from staging area",
+      "example": "git reset index.html",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git diff",
+      "desc": "Show file differences",
+      "usage": "Displays changes between commits or working tree",
+      "example": "git diff",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git pull --rebase",
+      "desc": "Fix rejected push",
+      "usage": "Use when push is rejected due to remote updates",
+      "example": "git pull --rebase origin main",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git commit --amend",
+      "desc": "Fix last commit",
+      "usage": "Edit the most recent commit",
+      "example": "git commit --amend",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git checkout -- <file>",
+      "desc": "Discard file changes",
+      "usage": "Restore file to last committed state",
+      "example": "git checkout -- index.html",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git config --global core.editor \"code --wait\"",
+      "desc": "Set VS Code as default editor",
+      "usage": "Use VS Code when editing commit messages",
+      "example": "git config --global core.editor \"code --wait\"",
+      "category": "setup"
+    },
+    {
+      "cmd": "git config --global init.defaultBranch main",
+      "desc": "Set default branch name",
+      "usage": "Use main instead of master",
+      "example": "git config --global init.defaultBranch main",
+      "category": "setup"
+    },
+    {
+      "cmd": "git rm <file>",
+      "desc": "Remove file from Git",
+      "usage": "Delete file and stage the deletion",
+      "example": "git rm test.txt",
+      "category": "basic"
+    },
+    {
+      "cmd": "git mv <old> <new>",
+      "desc": "Rename or move file",
+      "usage": "Rename or move file and stage change",
+      "example": "git mv old.js new.js",
+      "category": "basic"
+    },
+    {
+      "cmd": "git show",
+      "desc": "Show commit details",
+      "usage": "Display information about a commit",
+      "example": "git show",
+      "category": "basic"
+    },
+    {
+      "cmd": "git branch -d <branch>",
+      "desc": "Delete local branch",
+      "usage": "Remove a merged local branch",
+      "example": "git branch -d feature/login",
+      "category": "branch"
+    },
+    {
+      "cmd": "git branch -D <branch>",
+      "desc": "Force delete branch",
+      "usage": "Delete branch even if not merged",
+      "example": "git branch -D feature/bug",
+      "category": "branch"
+    },
+    {
+      "cmd": "git switch <branch>",
+      "desc": "Switch branch (modern)",
+      "usage": "Alternative to git checkout",
+      "example": "git switch develop",
+      "category": "branch"
+    },
+    {
+      "cmd": "git remote add origin <url>",
+      "desc": "Add remote repository",
+      "usage": "Connect local repo to remote",
+      "example": "git remote add origin https://github.com/user/repo.git",
+      "category": "remote"
+    },
+    {
+      "cmd": "git push -u origin main",
+      "desc": "Set upstream branch",
+      "usage": "Link local branch with remote branch",
+      "example": "git push -u origin main",
+      "category": "remote"
+    },
+    {
+      "cmd": "git remote remove origin",
+      "desc": "Remove remote",
+      "usage": "Delete remote repository link",
+      "example": "git remote remove origin",
+      "category": "remote"
+    },
+    {
+      "cmd": "git reflog",
+      "desc": "Recover lost commits",
+      "usage": "View history of HEAD changes (life saver)",
+      "example": "git reflog",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git cherry-pick <commit>",
+      "desc": "Pick a specific commit",
+      "usage": "Apply a single commit from another branch",
+      "example": "git cherry-pick a1b2c3",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git revert <commit>",
+      "desc": "Undo commit safely",
+      "usage": "Create a new commit that reverses changes",
+      "example": "git revert a1b2c3",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git pull origin main --allow-unrelated-histories",
+      "desc": "Fix unrelated histories error",
+      "usage": "Use when merging two unrelated repositories",
+      "example": "git pull origin main --allow-unrelated-histories",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git reset HEAD~1",
+      "desc": "Undo last commit (keep files)",
+      "usage": "Remove commit but keep changes",
+      "example": "git reset HEAD~1",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git clean -f",
+      "desc": "Remove untracked files",
+      "usage": "⚠️ Delete untracked files permanently",
+      "example": "git clean -f",
+      "category": "troubleshoot"
+    }
+  ],
+
+  "vi": [
+    {
+      "cmd": "git config --global user.name \"Tên của bạn\"",
+      "desc": "Thiết lập tên người dùng Git",
+      "usage": "Tên này sẽ hiển thị trong lịch sử commit",
+      "example": "git config --global user.name \"Nguyễn Văn A\"",
+      "category": "setup"
+    },
+    {
+      "cmd": "git config --global user.email \"email@example.com\"",
+      "desc": "Thiết lập email Git",
+      "usage": "Email nên trùng với email GitHub/GitLab",
+      "example": "git config --global user.email \"abc@gmail.com\"",
+      "category": "setup"
+    },
+    {
+      "cmd": "git config --list",
+      "desc": "Xem cấu hình Git",
+      "usage": "Hiển thị toàn bộ cấu hình Git hiện tại",
+      "example": "git config --list",
+      "category": "setup"
+    },
+    {
+      "cmd": "git config --global core.editor \"code --wait\"",
+      "desc": "Đặt VS Code làm trình soạn thảo mặc định",
+      "usage": "Sử dụng VS Code khi chỉnh sửa commit message",
+      "example": "git config --global core.editor \"code --wait\"",
+      "category": "setup"
+    },
+    {
+      "cmd": "git config --global init.defaultBranch main",
+      "desc": "Đặt tên nhánh mặc định là main",
+      "usage": "Sử dụng main thay cho master khi tạo repository mới",
+      "example": "git config --global init.defaultBranch main",
+      "category": "setup"
+    },
+    {
+      "cmd": "git status",
+      "desc": "Kiểm tra trạng thái repository",
+      "usage": "Hiển thị trạng thái file: đã stage, chưa stage, file mới",
+      "example": "git status",
+      "category": "basic"
+    },
+    {
+      "cmd": "git init",
+      "desc": "Khởi tạo repository Git mới",
+      "usage": "Tạo thư mục .git để bắt đầu quản lý phiên bản",
+      "example": "git init",
+      "category": "basic"
+    },
+    {
+      "cmd": "git rm <file>",
+      "desc": "Xóa file khỏi Git",
+      "usage": "Xóa file và tự động đưa việc xóa vào staging",
+      "example": "git rm test.txt",
+      "category": "basic"
+    },
+    {
+      "cmd": "git mv <old> <new>",
+      "desc": "Đổi tên hoặc di chuyển file",
+      "usage": "Đổi tên/di chuyển file và tự động stage thay đổi",
+      "example": "git mv old.js new.js",
+      "category": "basic"
+    },
+    {
+      "cmd": "git show",
+      "desc": "Xem chi tiết commit",
+      "usage": "Hiển thị nội dung, thay đổi và metadata của commit",
+      "example": "git show",
+      "category": "basic"
+    },
+    {
+      "cmd": "git clone <repo-url>",
+      "desc": "Sao chép repository từ xa",
+      "usage": "Tải toàn bộ repository từ GitHub/GitLab về máy",
+      "example": "git clone https://github.com/user/project.git",
+      "category": "remote"
+    },
+    {
+      "cmd": "git add .",
+      "desc": "Đưa tất cả file thay đổi vào staging",
+      "usage": "Stage toàn bộ file đã chỉnh sửa và file mới",
+      "example": "git add .",
+      "category": "basic"
+    },
+    {
+      "cmd": "git add <file>",
+      "desc": "Đưa một file cụ thể vào staging",
+      "usage": "Chỉ stage file được chỉ định",
+      "example": "git add index.html",
+      "category": "basic"
+    },
+    {
+      "cmd": "git commit -m \"message\"",
+      "desc": "Lưu thay đổi với commit message",
+      "usage": "Tạo commit kèm mô tả ngắn cho thay đổi",
+      "example": "git commit -m \"Thêm chức năng đăng nhập\"",
+      "category": "basic"
+    },
+    {
+      "cmd": "git commit --amend",
+      "desc": "Chỉnh sửa commit gần nhất",
+      "usage": "Sửa nội dung hoặc message của commit cuối",
+      "example": "git commit --amend",
+      "category": "basic"
+    },
+    {
+      "cmd": "git log",
+      "desc": "Xem lịch sử commit",
+      "usage": "Hiển thị đầy đủ lịch sử commit",
+      "example": "git log",
+      "category": "basic"
+    },
+    {
+      "cmd": "git log --oneline",
+      "desc": "Xem lịch sử commit dạng rút gọn",
+      "usage": "Mỗi commit hiển thị trên một dòng",
+      "example": "git log --oneline",
+      "category": "basic"
+    },
+    {
+      "cmd": "git branch",
+      "desc": "Xem danh sách nhánh",
+      "usage": "Liệt kê tất cả nhánh local",
+      "example": "git branch",
+      "category": "branch"
+    },
+    {
+      "cmd": "git branch <name>",
+      "desc": "Tạo nhánh mới",
+      "usage": "Tạo nhánh mới nhưng chưa chuyển sang",
+      "example": "git branch feature/login",
+      "category": "branch"
+    },
+    {
+      "cmd": "git checkout <branch>",
+      "desc": "Chuyển sang nhánh khác",
+      "usage": "Di chuyển HEAD sang nhánh chỉ định",
+      "example": "git checkout develop",
+      "category": "branch"
+    },
+    {
+      "cmd": "git checkout -b <branch>",
+      "desc": "Tạo và chuyển sang nhánh mới",
+      "usage": "Tạo nhánh mới và chuyển sang ngay",
+      "example": "git checkout -b feature/cart",
+      "category": "branch"
+    },
+    {
+      "cmd": "git merge <branch>",
+      "desc": "Gộp nhánh khác vào nhánh hiện tại",
+      "usage": "Kết hợp code từ nhánh khác",
+      "example": "git merge develop",
+      "category": "branch"
+    },
+    {
+      "cmd": "git pull",
+      "desc": "Lấy và gộp code từ repository từ xa",
+      "usage": "Cập nhật nhánh local từ remote",
+      "example": "git pull origin main",
+      "category": "remote"
+    },
+    {
+      "cmd": "git push",
+      "desc": "Đẩy commit lên repository từ xa",
+      "usage": "Đẩy commit local lên remote",
+      "example": "git push origin main",
+      "category": "remote"
+    },
+    {
+      "cmd": "git fetch",
+      "desc": "Lấy dữ liệu từ remote nhưng không gộp",
+      "usage": "Chỉ tải dữ liệu về mà không merge",
+      "example": "git fetch origin",
+      "category": "remote"
+    },
+    {
+      "cmd": "git remote -v",
+      "desc": "Xem danh sách remote repository",
+      "usage": "Hiển thị URL của các remote",
+      "example": "git remote -v",
+      "category": "remote"
+    },
+    {
+      "cmd": "git stash",
+      "desc": "Lưu tạm các thay đổi chưa commit",
+      "usage": "Cất thay đổi để chuyển nhánh an toàn",
+      "example": "git stash",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git stash pop",
+      "desc": "Khôi phục các thay đổi đã lưu tạm",
+      "usage": "Lấy lại thay đổi đã stash gần nhất",
+      "example": "git stash pop",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git reset --hard HEAD",
+      "desc": "Hủy toàn bộ thay đổi cục bộ",
+      "usage": "⚠️ Xóa sạch thay đổi chưa commit (NGUY HIỂM)",
+      "example": "git reset --hard HEAD",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git reset <file>",
+      "desc": "Bỏ file khỏi staging",
+      "usage": "Gỡ file khỏi staging nhưng không xóa nội dung",
+      "example": "git reset index.html",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git diff",
+      "desc": "Xem sự khác biệt giữa các file",
+      "usage": "So sánh thay đổi giữa các phiên bản",
+      "example": "git diff",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git pull --rebase",
+      "desc": "Sửa lỗi push bị từ chối",
+      "usage": "Dùng khi push bị lỗi do remote có commit mới",
+      "example": "git pull --rebase origin main",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git commit --amend",
+      "desc": "Sửa commit gần nhất",
+      "usage": "Chỉnh sửa message hoặc nội dung commit cuối",
+      "example": "git commit --amend",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git checkout -- <file>",
+      "desc": "Hủy thay đổi file",
+      "usage": "Khôi phục file về trạng thái đã commit",
+      "example": "git checkout -- index.html",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git branch -d <branch>",
+      "desc": "Xóa nhánh local",
+      "usage": "Chỉ xóa nhánh đã được merge",
+      "example": "git branch -d feature/login",
+      "category": "branch"
+    },
+    {
+      "cmd": "git branch -D <branch>",
+      "desc": "Xóa nhánh local (ép buộc)",
+      "usage": "Xóa nhánh kể cả khi chưa merge (⚠️ cẩn thận)",
+      "example": "git branch -D feature/bug",
+      "category": "branch"
+    },
+    {
+      "cmd": "git switch <branch>",
+      "desc": "Chuyển nhánh (cách mới)",
+      "usage": "Thay thế git checkout để chuyển nhánh",
+      "example": "git switch develop",
+      "category": "branch"
+    },
+    {
+      "cmd": "git remote add origin <url>",
+      "desc": "Thêm remote repository",
+      "usage": "Kết nối repository local với GitHub/GitLab",
+      "example": "git remote add origin https://github.com/user/repo.git",
+      "category": "remote"
+    },
+    {
+      "cmd": "git push -u origin main",
+      "desc": "Thiết lập upstream cho nhánh",
+      "usage": "Liên kết nhánh local với nhánh remote",
+      "example": "git push -u origin main",
+      "category": "remote"
+    },
+    {
+      "cmd": "git remote remove origin",
+      "desc": "Xóa remote repository",
+      "usage": "Gỡ liên kết remote khỏi repository local",
+      "example": "git remote remove origin",
+      "category": "remote"
+    },
+    {
+      "cmd": "git reflog",
+      "desc": "Khôi phục commit bị mất",
+      "usage": "Xem lịch sử thay đổi HEAD (cứu nguy khi reset nhầm)",
+      "example": "git reflog",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git cherry-pick <commit>",
+      "desc": "Lấy một commit cụ thể",
+      "usage": "Áp dụng một commit từ nhánh khác",
+      "example": "git cherry-pick a1b2c3",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git revert <commit>",
+      "desc": "Hoàn tác commit an toàn",
+      "usage": "Tạo commit mới để đảo ngược thay đổi",
+      "example": "git revert a1b2c3",
+      "category": "advanced"
+    },
+    {
+      "cmd": "git pull origin main --allow-unrelated-histories",
+      "desc": "Sửa lỗi unrelated histories",
+      "usage": "Dùng khi merge hai repository không liên quan",
+      "example": "git pull origin main --allow-unrelated-histories",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git reset HEAD~1",
+      "desc": "Hủy commit gần nhất (giữ file)",
+      "usage": "Quay về trước commit nhưng không mất code",
+      "example": "git reset HEAD~1",
+      "category": "troubleshoot"
+    },
+    {
+      "cmd": "git clean -f",
+      "desc": "Xóa file chưa được Git theo dõi",
+      "usage": "⚠️ Xóa vĩnh viễn các file untracked",
+      "example": "git clean -f",
+      "category": "troubleshoot"
+    }
+  ]
+}

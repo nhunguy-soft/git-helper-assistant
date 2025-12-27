@@ -1,0 +1,314 @@
+/* =========================================================
+   1. THIẾT LẬP CHUNG CHO TOÀN BỘ TRANG
+   =========================================================
+   - Chọn font chữ dễ đọc
+   - Tạo khoảng cách viền cho trang
+*/
+body {
+  font-family: Arial, sans-serif;
+  padding: 12px;
+}
+
+/* =========================================================
+   2. NÚT CHUYỂN NGÔN NGỮ (EN / VI)
+   =========================================================
+   - Gồm chữ EN / VI và một nút gạt
+*/
+.lang-wrapper {
+  display: flex;          /* Xếp các phần tử theo hàng ngang */
+  align-items: center;    /* Canh giữa theo chiều dọc */
+  gap: 8px;               /* Khoảng cách giữa các phần tử */
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* Khung của nút gạt */
+.switch {
+  position: relative;
+  width: 52px;
+  height: 26px;
+}
+
+/* Ẩn checkbox gốc */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Thanh trượt */
+.slider {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ccc, #bbb);
+  border-radius: 999px;
+  transition: 0.25s;
+}
+
+/* Nút tròn bên trong */
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 3px;
+  left: 3px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  transition: 0.25s;
+}
+
+/* Khi bật sang tiếng Việt */
+.switch input:checked + .slider {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* =========================================================
+   3. NÚT BẤM CHUNG (COPY, COMMIT, PAGINATION…)
+   ========================================================= */
+button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Khi rê chuột */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Khi bấm */
+button:active {
+  transform: scale(0.97);
+}
+
+/* =========================================================
+   4. THÔNG BÁO NHỎ (TOAST)
+   =========================================================
+   - Hiện khi copy lệnh
+*/
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #fff;
+  background: #11998e;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Khi toast xuất hiện */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   5. HỖ TRỢ TẠO COMMIT MESSAGE
+   ========================================================= */
+.commit-box {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.commit-box select,
+.commit-box input {
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.commit-box input {
+  flex: 1; /* Ô nhập dài ra chiếm phần còn lại */
+}
+
+/* =========================================================
+   6. THANH TÌM KIẾM + LỌC
+   ========================================================= */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0 16px;
+}
+
+.toolbar input,
+.toolbar select {
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.toolbar input {
+  flex: 1;
+}
+
+/* Khi click vào */
+.toolbar input:focus,
+.toolbar select:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 0 2px rgba(79,172,254,0.2);
+}
+
+/* =========================================================
+   7. BẢNG LỆNH GIT
+   ========================================================= */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+/* Header bảng */
+thead th {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Canh giữa cột copy */
+th:last-child,
+td:last-child {
+  text-align: center;
+}
+
+/* Dòng dữ liệu */
+tbody tr {
+  background: #fff;
+  border-radius: 8px;
+}
+
+tbody td {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Hiệu ứng khi rê chuột */
+tbody tr:hover {
+  background: rgba(79, 172, 254, 0.08);
+}
+
+/* =========================================================
+   8. PHÂN TRANG
+   ========================================================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.pagination button {
+  padding: 4px 10px;
+  font-size: 13px;
+  background: #e0e0e0;
+  color: #333;
+}
+
+.pagination button.active {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: #fff;
+}
+
+/* =========================================================
+   9. TOOLTIP GIẢI THÍCH LỆNH GIT
+   ========================================================= */
+.cmd-cell {
+  position: relative;
+  cursor: help;
+}
+
+/* Ô code của lệnh */
+.cmd-cell code {
+  background: #f4f6f8;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Hộp giải thích khi hover */
+.cmd-cell::after {
+  content: attr(data-usage) "\A Example: " attr(data-example);
+  white-space: pre-line;
+
+  position: absolute;
+  left: 0;
+  bottom: 120%;
+
+  min-width: 260px;
+  max-width: 320px;
+
+  background: #2d2d2d;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #93c5fd;
+
+  font-size: 12px;
+  line-height: 1.4;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: 0.2s;
+  pointer-events: none;
+  z-index: 99;
+}
+
+/* Khi rê chuột vào lệnh */
+.cmd-cell:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   10. DARK MODE (TỰ ĐỘNG)
+   ========================================================= */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1e1e1e;
+    color: #ddd;
+  }
+
+  .toolbar input,
+  .toolbar select,
+  .commit-box select,
+  .commit-box input {
+    background: #2a2a2a;
+    color: #ddd;
+    border-color: #444;
+  }
+
+  tbody tr {
+    background: #2a2a2a;
+  }
+
+  .cmd-cell code {
+    background: #3a3a3a;
+    color: #fff;
+  }
+}

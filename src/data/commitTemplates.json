@@ -1,0 +1,51 @@
+[
+  {
+    "type": "feat",
+    "desc": {
+      "en": "A new feature",
+      "vi": "Thêm tính năng mới"
+    }
+  },
+  {
+    "type": "fix",
+    "desc": {
+      "en": "A bug fix",
+      "vi": "Sửa lỗi"
+    }
+  },
+  {
+    "type": "docs",
+    "desc": {
+      "en": "Documentation changes",
+      "vi": "Thay đổi tài liệu"
+    }
+  },
+  {
+    "type": "style",
+    "desc": {
+      "en": "Code style changes",
+      "vi": "Thay đổi định dạng code (không ảnh hưởng logic)"
+    }
+  },
+  {
+    "type": "refactor",
+    "desc": {
+      "en": "Code refactoring",
+      "vi": "Tái cấu trúc code"
+    }
+  },
+  {
+    "type": "test",
+    "desc": {
+      "en": "Add or update tests",
+      "vi": "Thêm hoặc cập nhật kiểm thử"
+    }
+  },
+  {
+    "type": "chore",
+    "desc": {
+      "en": "Maintenance tasks",
+      "vi": "Công việc bảo trì"
+    }
+  }
+]

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Load CSS từ VS Code Webview -->
+  <link rel="stylesheet" href="{{styleUri}}" />
+  <title>Git Helper Assistant</title>
+</head>
+
+<body>
+
+  <!-- ===== Toast thông báo copy ===== -->
+  <div id="toast" class="toast">Copied!</div>
+
+  <!-- ===== Tiêu đề ===== -->
+  <h2>Git Helper Assistant</h2>
+
+  <!-- ===== Chuyển đổi ngôn ngữ EN / VI ===== -->
+  <div class="lang-wrapper">
+    <span>EN</span>
+
+    <label class="switch">
+      <input type="checkbox" id="langToggle" />
+      <span class="slider"></span>
+    </label>
+
+    <span>VI</span>
+  </div>
+
+  <!-- ===== Commit Message Helper ===== -->
+  <h3>Commit Message Helper</h3>
+
+  <div class="commit-box">
+    <!-- Chọn loại commit (feat, fix, docs, ...) -->
+    <select id="commitType"></select>
+
+    <!-- Mô tả commit -->
+    <input type="text" id="commitDesc" placeholder="Describe your change..." />
+
+    <!-- Copy commit message -->
+    <button id="commitCopyBtn">
+      Copy Commit
+    </button>
+  </div>
+
+  <hr />
+
+  <h3>Git Command</h3>
+
+  <!-- ===== Thanh công cụ: Search + Filter ===== -->
+  <div class="toolbar">
+    <!-- Tìm kiếm command -->
+    <input type="text" id="searchInput" placeholder="Search git command..." />
+
+    <!-- Lọc theo nhóm command -->
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="setup">Setup</option>
+      <option value="basic">Basic</option>
+      <option value="branch">Branch</option>
+      <option value="remote">Remote</option>
+      <option value="advanced">Advance</option>
+      <option value="troubleshoot">Troubleshoot</option>
+    </select>
+  </div>
+
+
+  <!-- ===== Bảng Git Commands ===== -->
+  <table>
+    <thead>
+      <tr>
+        <th>Command</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <!-- Nội dung bảng được render bằng JS -->
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <!-- ===== Pagination ===== -->
+  <div id="pagination" class="pagination"></div>
+
+  <!-- ===== Load JS ===== -->
+  <script src="{{scriptUri}}"></script>
+
+</body>
+
+</html>
