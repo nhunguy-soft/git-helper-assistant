@@ -147,7 +147,7 @@ Nhấn F5 để chạy Extension Development Host
 ```
 ---
 
-🚀 Cách sử dụng
+## 🚀 Cách sử dụng
 
 1. Mở Command Palette (Ctrl + Shift + P)
 
@@ -169,7 +169,7 @@ Hiện tại extension không yêu cầu cấu hình.
 
 ---
 
-##🧑‍🎓 Thông tin đồ án
+## 🧑‍🎓 Thông tin đồ án
 
 Dự án được thực hiện bởi sinh viên, nhằm hỗ trợ người mới học Git tiếp cận các lệnh Git một cách trực quan, dễ hiểu và an toàn khi sử dụng.
 
