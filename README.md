@@ -1,6 +1,8 @@
 # Git Helper Assistant
 
-🌍 Languages: [English](README.md) | [Tiếng Việt](README.vi.md)
+🌍 Languages: [English](#english) | [Tiếng Việt](#tiếng-việt)
+
+## English
 
 🧩 A beginner-friendly VS Code extension that helps users understand and use Git commands easily through a visual table, hover guidance, and terminal integration.
 
@@ -97,11 +99,11 @@ Pull requests and suggestions are welcome ❤️
 
 ---
 
-# 📄 README.vi.md (Tiếng Việt)
-
 # Git Helper Assistant
 
-🌍 Ngôn ngữ: [Tiếng Việt](README.vi.md) | [English](README.md)
+🌍 Languages: [English](#english) | [Tiếng Việt](#tiếng-việt)
+
+## Tiếng Việt
 
 🧩 Một tiện ích mở rộng cho Visual Studio Code giúp **người mới học Git** dễ dàng hiểu và sử dụng các lệnh Git thông qua bảng trực quan, hướng dẫn khi hover và tích hợp Terminal.
 
