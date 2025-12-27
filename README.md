@@ -1,71 +1,195 @@
-# git-helper-assistant README
+# Git Helper Assistant
 
-This is the README for your extension "git-helper-assistant". After writing up a brief description, we recommend including the following sections.
+🌍 Languages: [English](README.md) | [Tiếng Việt](README.vi.md)
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+🧩 A beginner-friendly VS Code extension that helps users understand and use Git commands easily through a visual table, hover guidance, and terminal integration.
 
 ---
 
-## Following extension guidelines
+## ✨ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- 📋 Display a **visual table of common Git commands**
+- 🖱 Click a command to **paste it into the Terminal** (does NOT auto-run)
+- 💡 Hover on a command to see **usage instructions**
+- 🗂 Git commands are categorized into:
+  - Basic
+  - Branch
+  - Remote
+  - History
+- 🎨 Clean and beginner-friendly UI
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+## 📸 Demo
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+---
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+## 📦 Installation | Cài đặt
 
-## For more information
+Method 1: Install from VS Code Marketplace
+1. Open Visual Studio Code
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+2. Go to Extensions (Ctrl + Shift + X)
 
-**Enjoy!**
+3. Search for Git Helper Assistant
+
+4. Click Install
+
+Method 2: Run manually (for development)
+
+```md
+npm install
+code .
+Press F5 to launch Extension Development Host
+```
+
+---
+
+## 🚀 How to Use
+
+1. Open Command Palette (Ctrl + Shift + P)
+   
+2. Type: Git Helper Assistant: Open
+   
+3. A Git command table will appear
+   
+4. Click a command to paste it into the Terminal
+   
+5. Edit if needed, then press Enter to run
+
+👉 Commands are not auto-executed, giving beginners full control.
+
+---
+
+## 📘 Example Commands
+
+---
+
+## ⚙️ Extension Settings
+
+This extension does not require any configuration.
+
+---
+
+## 🧑‍🎓 About This Project
+
+This project was developed by a student to help Git beginners learn and use Git commands in a clear, visual, and safe way.
+
+---
+
+## 📝 Release Notes
+ 1.0.0
+ 
+ - Initial release
+   
+ - Git command table
+   
+ - Hover usage guide
+   
+ - Click to paste into terminal
+
+---
+
+## 🤝 Contributing
+
+Pull requests and suggestions are welcome ❤️
+
+
+---
+
+# 📄 README.vi.md (Tiếng Việt)
+
+# Git Helper Assistant
+
+🌍 Ngôn ngữ: [Tiếng Việt](README.vi.md) | [English](README.md)
+
+🧩 Một tiện ích mở rộng cho Visual Studio Code giúp **người mới học Git** dễ dàng hiểu và sử dụng các lệnh Git thông qua bảng trực quan, hướng dẫn khi hover và tích hợp Terminal.
+
+---
+
+## ✨ Tính năng chính
+
+- 📋 Hiển thị **bảng các lệnh Git phổ biến** kèm mô tả rõ ràng
+- 🖱 Click vào lệnh để **dán lệnh vào Terminal** (KHÔNG tự động chạy)
+- 💡 Hover vào lệnh để xem **hướng dẫn sử dụng chi tiết**
+- 🗂 Phân loại lệnh Git theo nhóm:
+  - Basic (Cơ bản)
+  - Branch (Nhánh)
+  - Remote (Kho từ xa)
+  - History (Lịch sử)
+- 🎨 Giao diện thân thiện, dễ nhìn cho người mới
+
+---
+
+## 📸 Minh họa
+
+---
+
+## 📦 Cài đặt
+Cách 1: Cài từ VS Code Marketplace
+
+1. Mở Visual Studio Code
+
+2. Vào Extensions (Ctrl + Shift + X)
+
+3. Tìm Git Helper Assistant
+
+4. Nhấn Install
+
+Cách 2: Chạy thủ công (dành cho phát triển)
+
+```md
+npm install
+code .
+Nhấn F5 để chạy Extension Development Host
+```
+---
+
+🚀 Cách sử dụng
+
+1. Mở Command Palette (Ctrl + Shift + P)
+
+2. Gõ: Git Helper Assistant: Open
+
+3. Bảng lệnh Git sẽ hiện ra
+
+4. Click vào lệnh để dán lệnh vào Terminal
+
+5. Chỉnh sửa nếu cần và nhấn Enter để chạy
+
+👉 Extension KHÔNG tự động chạy lệnh, giúp người mới kiểm soát tốt hơn.
+
+---
+
+## ⚙️ Cấu hình
+
+Hiện tại extension không yêu cầu cấu hình.
+
+---
+
+##🧑‍🎓 Thông tin đồ án
+
+Dự án được thực hiện bởi sinh viên, nhằm hỗ trợ người mới học Git tiếp cận các lệnh Git một cách trực quan, dễ hiểu và an toàn khi sử dụng.
+
+---
+
+## 📝 Ghi chú phiên bản
+1.0.0
+
+- Phát hành lần đầu
+
+- Bảng lệnh Git trực quan
+
+- Hướng dẫn khi hover
+
+- Click để dán lệnh vào Terminal
+
+---
+
+## 🤝 Đóng góp
+
+Pull request và góp ý luôn được hoan nghênh ❤️
+
+
+
+
